@@ -1,5 +1,86 @@
 import styles from "./About.module.scss";
 
+const DEFAULT_WORK = {
+  ui: [
+    {
+      tech: "Figma",
+      icon: styles.icon_sqaure
+    },
+    {
+      tech: "Adobe XD",
+      icon: styles.icon_sqaure
+    },
+    {
+      tech: "Adobe Photoshop<",
+      icon: styles.icon_drop
+    },
+    {
+      tech: "Adobe Illustrator",
+      icon: styles.icon_drop
+    },
+    {
+      tech: "Adobe Premier",
+      icon: styles.icon_video
+    },
+    {
+      tech: "Adobe After Effects",
+      icon: styles.icon_video
+    },
+  ],
+  frontend: [
+      {
+          tech: "JavaScript (ES6)",
+          icon: styles.icon_braces
+      },
+      {
+          tech: "React",
+          icon: styles.icon_braces
+      },
+      {
+          tech: "Angular",
+          icon: styles.icon_braces
+      },
+      {
+          tech: "HTML5",
+          icon: styles.icon_braces
+      },
+      {
+          tech: "CSS3",
+          icon: styles.icon_braces
+      },
+      {
+          tech: "SASS/SCSS",
+          icon: styles.icon_braces
+      },
+  ],
+  backend: [
+    {
+      tech: "Ruby on Rails",
+      icon: styles.icon_braces
+    },
+    {
+      tech: "PHP",
+      icon: styles.icon_braces
+    },
+    {
+      tech: "ExpressJS",
+      icon: styles.icon_braces
+    },
+    {
+      tech: "NestJs",
+      icon: styles.icon_braces
+    },
+    {
+      tech: "MySQL",
+      icon: styles.icon_database
+    },
+    {
+      tech: "PostgreSQL",
+      icon: styles.icon_database
+    },
+  ],
+};
+
 export default function About() {
   return (
     <div className={`${styles.container} hidden`}>
@@ -16,36 +97,27 @@ export default function About() {
           <div className={styles.column}>
             <h3 className={styles.design}>UI/UX Design</h3>
             <ul>
-              <li className={`${styles.icon} ${styles.icon_sqaure}`}>Figma</li>
-              <li className={`${styles.icon} ${styles.icon_sqaure}`}>Adobe XD</li>
-              <li className={`${styles.icon} ${styles.icon_drop}`}>Adobe Photoshop</li>
-              <li className={`${styles.icon} ${styles.icon_drop}`}>Adobe Illustrator</li>
-              <li className={`${styles.icon} ${styles.icon_video}`}>Adobe Premier</li>
-              <li className={`${styles.icon} ${styles.icon_video}`}>Adobe After Effects</li>
+              {DEFAULT_WORK.ui.map((work, index) => {
+                return <li key={index} className={`${styles.icon} ${work.icon}`}>{work.tech}</li>
+              })}
             </ul>
           </div>
 
           <div className={styles.column}>
             <h3 className={styles.frontend}>Front-end</h3>
             <ul>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>JavaScript (ES6)</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>ReactJS</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>Angular</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>HTML5</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>CSS3</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>SASS/SCSS</li>
+              {DEFAULT_WORK.frontend.map((work, index) => {
+                return <li key={index} className={`${styles.icon} ${work.icon}`}>{work.tech}</li>
+              })}
             </ul>
           </div>
 
           <div className={styles.column}>
             <h3 className={styles.backend}>Back-end</h3>
             <ul>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>Ruby on Rails</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>PHP</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>ExpressJS</li>
-              <li className={`${styles.icon} ${styles.icon_braces}`}>NestJs</li>
-              <li className={`${styles.icon} ${styles.icon_database}`}>MySQL</li>
-              <li className={`${styles.icon} ${styles.icon_database}`}>PostgreSQL</li>
+              {DEFAULT_WORK.backend.map((work, index) => {
+                return <li key={index} className={`${styles.icon} ${work.icon}`}>{work.tech}</li>
+              })}
             </ul>
           </div>
 
