@@ -5,7 +5,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 11;
+  z-index: 999;
   padding: 20px 0;
   background: linear-gradient(to bottom, $color-secondary-rgb-1, $color-secondary-rgb-0);
 

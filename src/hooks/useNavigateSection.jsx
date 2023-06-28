@@ -10,16 +10,17 @@ export default function useNavigateSection(sections) {
         if (isSectionInViewport(section)) {
           history.replaceState(null, null, `#${section.id}`);
           setSection(section.id);
-          animateSection(section);
+          // console.log(section.id);
+          // animateSection(section);
         }
       });
     };
 
     const appContainer = document.getElementById('root');
-    appContainer.addEventListener('scroll', handleScroll);
+    appContainer.addEventListener('wheel', handleScroll);
 
     return () => {
-      appContainer.removeEventListener('scroll', handleScroll);
+      appContainer.removeEventListener('wheel', handleScroll);
     };
   }, []);
 
@@ -37,23 +38,23 @@ export default function useNavigateSection(sections) {
     return sectionInTopBounds || sectionInBottomBounds;
   };
 
-  const resetAnimateSection = () => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => {
-      const sectionContent = section.querySelector(':first-child');
-      sectionContent.classList.remove('visible');
-      sectionContent.classList.add('hidden');
-      // sectionContent.classList.remove('fade-in-up');
-    });
-  }
-
-  const animateSection = (section) => {
-    resetAnimateSection();
-    const sectionContent = section.querySelector(':first-child');
-    sectionContent.classList.add('visible');
-    sectionContent.classList.remove('hidden');
-    // sectionContent.classList.add('fade-in-up');
-  }
+  // const resetAnimateSection = () => {
+  //   const sections = document.querySelectorAll('section');
+  //   sections.forEach((section) => {
+  //     const sectionContent = section.querySelector(':first-child');
+  //     // sectionContent.classList.remove('visible');
+  //     // sectionContent.classList.add('hidden');
+  //     sectionContent.classList.remove('fade-in-up');
+  //   });
+  // }
+  //
+  // const animateSection = (section) => {
+  //   resetAnimateSection();
+  //   const sectionContent = section.querySelector(':first-child');
+  //   // sectionContent.classList.add('visible');
+  //   // sectionContent.classList.remove('hidden');
+  //   sectionContent.classList.add('fade-in-up');
+  // }
 
   const navigateSection = (event) => {
     event.preventDefault();
@@ -66,7 +67,7 @@ export default function useNavigateSection(sections) {
       history.replaceState(null, null, `#${sectionId}`);
       setSection(sectionId);
       section.scrollIntoView({behavior: 'smooth'});
-      animateSection(section);
+      // animateSection(section);
     }
   };
 

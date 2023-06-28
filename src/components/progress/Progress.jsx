@@ -8,9 +8,7 @@ export default function Progress({sections, activeSection, navigateSection}) {
         {sections.map((section, index) => {
           const isActive = activeSection === section.key;
           return <li key={index}>
-            <a href={`/#${section.key}`} className={isActive ? styles.active : ''} onClick={navigateSection}>
-              <span></span>
-            </a>
+            <a href={`/#${section.key}`} className={isActive ? styles.active : ''} onClick={navigateSection}></a>
           </li>;
         })}
       </ul>
