@@ -31,7 +31,7 @@ function Experience() {
   return (
     <div className={`${styles.container} hidden`}>
       <div className={styles.content}>
-        <h2>Worked Experience</h2>
+        <h2>Work Experience</h2>
         <div className={styles.timeline}>
           {DEFAULT_EXPERIENCE.map((item, index) => {
             const tags = item.tags

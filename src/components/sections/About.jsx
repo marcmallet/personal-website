@@ -11,7 +11,7 @@ const DEFAULT_WORK = {
       icon: styles.icon_sqaure
     },
     {
-      tech: "Adobe Photoshop<",
+      tech: "Adobe Photoshop",
       icon: styles.icon_drop
     },
     {

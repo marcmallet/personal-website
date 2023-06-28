@@ -8,13 +8,6 @@
   .content {
     padding-top: 50px;
 
-    img {
-      margin: 0 auto 30px;
-      display: block;
-      text-align: center;
-      height: 70px;
-    }
-
     hgroup {
       display: block;
       width: 100%;
@@ -48,10 +41,6 @@
           background-size: contain;
         }
       }
-    }
-
-    p {
-      max-width: 700px;
     }
 
     ul {
@@ -103,3 +92,20 @@
   }
 }
 
+@media screen and (max-width: $viewport-mobile) {
+  .container {
+    .content {
+      padding-top: 120px;
+
+      hgroup {
+        h1 { font-size: 2.5rem; }
+        h2 {
+          font-size: 1rem;
+          font-weight: 200;
+          line-height: 1.6rem;
+        }
+      }
+    }
+    .mouse { display: none;}
+  }
+}

@@ -48,3 +48,11 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: $viewport-mobile) {
+  nav {
+    &.progress {
+      display: none;
+    }
+  }
+}

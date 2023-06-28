@@ -114,3 +114,54 @@
   }
 }
 
+@media screen and (max-width: $viewport-mobile) {
+  .container {
+    .content {
+
+      .timeline {
+        padding-bottom: 30px;
+
+        .item {
+          display: flex;
+          flex-wrap: unset;
+
+          .company {
+            .tags {
+              display: flex;
+              flex-wrap: wrap;
+            }
+          }
+
+          .date {
+            flex: unset;
+            width: 80px;
+            padding: 20px 0;
+            text-align: left;
+          }
+
+          &:nth-child(even) {
+            flex-direction: inherit;
+            .company {
+              text-align: left;
+              .tags {
+                flex-direction: inherit;
+              }
+
+              &::before {
+                left: -2px;
+                right: unset;
+              }
+            }
+            .date {
+              text-align: left;
+            }
+          }
+        }
+
+        &::before {
+          left: 80px;
+        }
+      }
+    }
+  }
+}

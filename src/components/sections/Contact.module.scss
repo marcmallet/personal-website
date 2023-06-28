@@ -4,10 +4,6 @@
 
 .container {
   .content {
-    p {
-      max-width: 700px;
-    }
-
     a.contact {
       margin-top: 20px;
       display: inline-block;
@@ -71,3 +67,15 @@
   }
 }
 
+@media screen and (max-width: $viewport-mobile) {
+  .container {
+    ul {
+      position: relative;
+      bottom: unset;
+      width: 100%;
+      padding: 0 0 30px;
+      list-style: none;
+      gap: 10px;
+    }
+  }
+}
