@@ -6,7 +6,7 @@ export default function About() {
             <div className={styles.content}>
                 <h2>About</h2>
                 <p>
-                    Throughout my career, I have acquired experience working with a wide range of Front-end and Back-end
+                    Throughout my career, I have gained experience working with a wide range of Front-end and Back-end
                     languages and frameworks, which has equipped me with a diverse and well-rounded skill set. Some of
                     the my favourite technologies are listed below.
                 </p>
