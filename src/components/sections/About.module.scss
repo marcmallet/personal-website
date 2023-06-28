@@ -1,0 +1,100 @@
+@import "../../commen/variables";
+@import "../../commen/animation";
+@import "../../commen/container";
+
+.container {
+  .content {
+    p { max-width: 700px; }
+
+    .grid {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      min-height: 100px;
+      padding-top: 20px;
+
+      .column {
+        flex: 1;
+        background: #1B2A3F;
+        border-radius: 10px;
+
+        h3 {
+          display: block;
+          margin: 0 auto;
+          padding: 15px 20px 15px 20px;
+
+          &.design::before, &.frontend::before, &.backend::before  {
+            content: "";
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            display: inline-block;
+          }
+
+          &.design::before {
+            background: url("../../assets/images/icons/icon-ui.svg") no-repeat center left;
+            background-size: contain;
+          }
+          &.frontend::before {
+            background: url("../../assets/images/icons/icon-frontend.svg") no-repeat center left;
+            background-size: contain;
+          }
+          &.backend::before {
+            background: url("../../assets/images/icons/icon-backend.svg") no-repeat center left;
+            background-size: contain;
+          }
+        }
+
+        ul {
+          display: block;
+          margin: 0 auto;
+          padding: 0;
+          list-style: none;
+
+          li{
+            display: block;
+            margin: 0 auto;
+            padding: 8px 20px;
+            list-style: none;
+            text-align: left;
+            border-top: 1px $color-secondary solid;
+
+            &:first-of-type {
+              border-top: 0;
+            }
+
+            &.icon::before  {
+              content: "";
+              width: 16px;
+              height: 16px;
+              margin-right: 10px;
+              display: inline-block;
+            }
+            &.icon_sqaure::before {
+              background: url("../../assets/images/icons/icon-ui-sqaure.svg") no-repeat center left;
+              background-size: contain;
+            }
+            &.icon_drop::before {
+              background: url("../../assets/images/icons/icon-ui-drop.svg") no-repeat center left;
+              background-size: contain;
+            }
+            &.icon_video::before {
+              background: url("../../assets/images/icons/icon-ui-video.svg") no-repeat center left;
+              background-size: contain;
+            }
+
+            &.icon_braces::before {
+              background: url("../../assets/images/icons/icon-frontend-braces.svg") no-repeat center left;
+              background-size: contain;
+            }
+            &.icon_database::before {
+              background: url("../../assets/images/icons/icon-backend-database.svg") no-repeat center left;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

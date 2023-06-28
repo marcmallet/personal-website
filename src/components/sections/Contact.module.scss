@@ -1,0 +1,67 @@
+@import "../../commen/variables";
+@import "../../commen/animation";
+@import "../../commen/container";
+
+.container {
+  .content {
+    p { max-width: 700px; }
+
+    a.contact {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px $color-primary solid;
+      border-radius: 8px;
+      color: $color-white;
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url("../../assets/images/icons/icon-say-hello.svg") no-repeat center left;
+        background-size: contain;
+        margin-right: 10px;
+      }
+      &:hover {
+        background: #121c2c;
+      }
+    }
+  }
+
+  ul {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    width: 100%;
+    padding: 40px 0 0;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+
+    li a {
+      display: block;
+      width: 28px;
+      height: 28px;
+
+      &.linkedin {
+        background: url("../../assets/images/icons/icon-linkedin-white.svg") no-repeat center;
+        background-size: 80%;
+      }
+      &.instagram {
+        background: url("../../assets/images/icons/icon-instagram-white.svg") no-repeat center;
+        background-size: 95%;
+      }
+      &.dribbble {
+        background: url("../../assets/images/icons/icon-dribbble-white.svg") no-repeat center;
+        background-size: 90%;
+      }
+      &.github {
+        background: url("../../assets/images/icons/icon-github-white.svg") no-repeat center;
+        background-size: 75%;
+      }
+    }
+  }
+}
+
