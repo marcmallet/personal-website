@@ -4,6 +4,6 @@ import About from "./About.jsx";
 import Experience from "./Experience.jsx";
 import Contact from "./Contact";
 
-export { Section, Hero, About, Experience, Contact };
+export {Section, Hero, About, Experience, Contact};
 
 

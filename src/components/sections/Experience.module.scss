@@ -4,7 +4,7 @@
 
 .container {
   .content {
-    .timeline{
+    .timeline {
       display: block;
       position: relative;
       width: 100%;
@@ -12,63 +12,70 @@
       padding-bottom: 10px;
 
       .item {
-       display: flex;
-       flex-wrap: wrap;
-       width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
 
-       .company {
-         flex: 1;
-         padding: 20px;
-         text-align: left;
-         position: relative;
+        .company {
+          flex: 1;
+          padding: 20px;
+          text-align: left;
+          position: relative;
 
-         .tags {
-           display: flex;
-           padding-top: 8px;
-           gap: 5px;
-           align-items: flex-start;
+          .tags {
+            display: flex;
+            padding-top: 8px;
+            gap: 5px;
+            align-items: flex-start;
 
-           .tag{
-             display: inline-block;
-             padding: 3px 8px;
-             background: #1B2A3F;
-             border-radius: 5px;
-             color: $color-white;
-             font-size: 14px;
-           }
-         }
+            .tag {
+              display: inline-block;
+              padding: 3px 8px;
+              background: #1B2A3F;
+              border-radius: 5px;
+              color: $color-white;
+              font-size: 14px;
+            }
+          }
 
-         &::before {
-           content: "";
-           position: absolute;
-           top: 28px;
-           left: -2px;
-           width: 6px;
-           height: 6px;
-           border-radius: 50%;
-           background-color: #2D3C52;
-         }
-       }
-       .date {
-         flex: 1;
-         padding: 20px;
-         text-align: right;
-       }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 28px;
+            left: -2px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #2D3C52;
+          }
+        }
 
-       &:nth-child(even){
-         flex-direction: row-reverse;
-         .company {
-           text-align: right;
-           .tags {
-             flex-direction: row-reverse;
-           }
-           &::before {
-             left: unset;
-             right: -4px;
-           }
-         }
-         .date { text-align: left; }
-       }
+        .date {
+          flex: 1;
+          padding: 20px;
+          text-align: right;
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+
+          .company {
+            text-align: right;
+
+            .tags {
+              flex-direction: row-reverse;
+            }
+
+            &::before {
+              left: unset;
+              right: -4px;
+            }
+          }
+
+          .date {
+            text-align: left;
+          }
+        }
       }
 
       &::before {
@@ -81,6 +88,7 @@
         background-color: #2D3C52;
       }
     }
+
     a.linkedin {
       display: inline-block;
       padding: 8px 15px;
@@ -98,6 +106,7 @@
         background-size: contain;
         margin-right: 10px;
       }
+
       &:hover {
         background: #121c2c;
       }

@@ -25,9 +25,11 @@
         font-size: 22px;
         font-weight: 200;
         line-height: 18px;
+
         span {
           color: $color-primary;
         }
+
         &::before {
           content: "";
           width: 18px;
@@ -36,6 +38,7 @@
           background: url("../../assets/images/icons/icon-code-left.svg") no-repeat center left;
           background-size: contain;
         }
+
         &::after {
           content: "";
           width: 18px;
@@ -47,7 +50,9 @@
       }
     }
 
-    p { max-width: 700px; }
+    p {
+      max-width: 700px;
+    }
 
     ul {
       margin: 0 auto;
@@ -67,14 +72,17 @@
           background: url("../../assets/images/icons/icon-linkedin.svg") no-repeat center;
           background-size: 80%;
         }
+
         &.instagram {
           background: url("../../assets/images/icons/icon-instagram.svg") no-repeat center;
           background-size: 95%;
         }
+
         &.dribbble {
           background: url("../../assets/images/icons/icon-dribbble.svg") no-repeat center;
           background-size: 90%;
         }
+
         &.github {
           background: url("../../assets/images/icons/icon-github.svg") no-repeat center;
           background-size: 75%;

@@ -21,6 +21,7 @@ nav {
       li a {
         display: block;
         padding: 0 10px;
+
         span {
           display: block;
           width: 3.5px;
@@ -31,11 +32,13 @@ nav {
           transition: all 0.3s ease;
 
         }
+
         &:hover, &.active {
           span {
             background: $color-primary;
           }
         }
+
         &.active {
           span {
             height: 30px;
