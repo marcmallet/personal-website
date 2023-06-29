@@ -3,28 +3,28 @@ import PropTypes from 'prop-types';
 
 const DEFAULT_EXPERIENCE = [
   {
-    position: "UI Developer",
+    position: "UI Developer (Ruby on Rails)",
     company: "Sustainalytics, Toronto, Ontario, Canada",
     date: "Mar 2022",
-    tags: ["UI/UX", "Ruby on Rails", "Javascript"]
+    tags: ["Ruby on Rails", "JavaScript", "UI Design"]
   },
   {
-    position: "Senior Software Developer & UI/UX Designer",
+    position: "Senior Full Stack UI Developer",
     company: "Fundhouse, Cape Town, South Africa",
     date: "Jul 2019",
-    tags: ["UI/UX", "PHP", "JavaScript", "ReactJS", "Figma", "AWS"]
+    tags: ["PHP", "React", "JavaScript", "UI Design"]
   },
   {
-    position: "Front-end Developer",
+    position: "Frontend UI Developer",
     company: "aYo Holdings (MTN & MMI JV), Cape Town, South Africa",
     date: "Nov 2018",
-    tags: ["UI/UX", "Angular", "Javascript", "Azure"]
+    tags: ["Angular", "UI Design"]
   },
   {
-    position: "Software Developer & UI/UX Designer",
+    position: "Full Stack UI Developer",
     company: "Fundhouse, Cape Town, South Africa",
     date: "Sep 2015",
-    tags: ["UI/UX", "PHP", "JavaScript", "Figma", "AWS", "UI/UX"]
+    tags: ["PHP", "JavaScript", "UI Design"]
   },
 ];
 
