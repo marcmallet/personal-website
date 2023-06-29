@@ -1,8 +1,9 @@
 import styles from "./Contact.module.scss";
+import PropTypes from 'prop-types';
 
-function Contact() {
+export default function Contact({ id }) {
   return (
-    <div className={`${styles.container} hidden`}>
+    <section id={id} className={styles.container}>
       <div className={styles.content}>
         <h2>Contact</h2>
         <p>
@@ -12,15 +13,10 @@ function Contact() {
         </p>
         <a href="mailto:marcmallet.sa@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.contact}>Wanna say hello?</a>
       </div>
-
-      <ul>
-        <li><a href="https://www.linkedin.com/in/marc-mallet-a1059815/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}></a></li>
-        <li><a href="https://dribbble.com/marcmallet/" target="_blank" rel="noopener noreferrer" className={styles.dribbble}></a></li>
-        <li><a href="https://www.instagram.com/marcmallet.ui/" target="_blank" rel="noopener noreferrer" className={styles.instagram}></a></li>
-        <li><a href="https://https://github.com/marcmallet/" target="_blank" rel="noopener noreferrer" className={styles.github}></a></li>
-      </ul>
-    </div>
+    </section>
   )
 }
 
-export default Contact
+Contact.propTypes = {
+  id: PropTypes.string.isRequired
+};

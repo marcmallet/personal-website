@@ -1,9 +1,21 @@
 @import "../../commen/variables";
 @import "../../commen/animation";
-@import "../../commen/container";
 
 .container {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 100px 0 120px;
+
   .content {
+    margin: 0 auto;
+    display: block;
+    max-width: $container-max-width;
+    padding: 0 40px;
+    text-align: center;
+    opacity: 0;
+
     .timeline {
       display: block;
       position: relative;
@@ -114,10 +126,9 @@
   }
 }
 
-@media screen and (max-width: $viewport-mobile) {
+@media screen and (max-width: $container-min-width) {
   .container {
     .content {
-
       .timeline {
         padding-bottom: 30px;
 
@@ -131,7 +142,6 @@
               flex-wrap: wrap;
             }
           }
-
           .date {
             flex: unset;
             width: 80px;
@@ -146,7 +156,6 @@
               .tags {
                 flex-direction: inherit;
               }
-
               &::before {
                 left: -2px;
                 right: unset;
@@ -157,7 +166,6 @@
             }
           }
         }
-
         &::before {
           left: 80px;
         }

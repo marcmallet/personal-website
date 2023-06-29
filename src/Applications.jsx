@@ -2,10 +2,10 @@ import './Application.scss';
 
 import useNavigateSection from "./hooks/useNavigateSection.jsx";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import Progress from "./components/progress/Progress";
 import {
   Hero,
-  Section,
   About,
   Experience,
   Contact
@@ -18,22 +18,19 @@ const DEFAULT_SECTIONS = [
   {key: "contact", label: "contact", component: Contact}
 ];
 
-function Applications() {
-  const {section: activeSection, navigateSection} = useNavigateSection(DEFAULT_SECTIONS.map(section => section.key));
+export default function Applications() {
+  const sections = DEFAULT_SECTIONS.map(section => section.key);
+  const {section: activeSection, navigateSection} = useNavigateSection(sections);
+
   return (
     <>
       <Header sections={DEFAULT_SECTIONS} activeSection={activeSection} navigateSection={navigateSection}/>
       <Progress sections={DEFAULT_SECTIONS} activeSection={activeSection} navigateSection={navigateSection}/>
       {DEFAULT_SECTIONS.map((section, index) => {
-        const Component = section.component;
-        return (
-          <Section key={index} id={section.key}>
-            <Component/>
-          </Section>
-        )
+        const Section = section.component;
+        return <Section key={index} id={section.key} />
       })}
+      <Footer/>
     </>
   )
 }
-
-export default Applications

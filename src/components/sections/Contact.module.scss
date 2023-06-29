@@ -1,81 +1,49 @@
 @import "../../commen/variables";
 @import "../../commen/animation";
-@import "../../commen/container";
 
 .container {
-  .content {
-    a.contact {
-      margin-top: 20px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 100px 0 150px;
+}
+.content {
+  margin: 0 auto;
+  display: block;
+  max-width: $container-max-width;
+  padding: 0 40px;
+  text-align: center;
+  opacity: 0;
+
+  a.contact {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px $color-primary solid;
+    border-radius: 8px;
+    color: $color-white;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
       display: inline-block;
-      padding: 8px 15px;
-      border: 1px $color-primary solid;
-      border-radius: 8px;
-      color: $color-white;
-      text-decoration: none;
-
-      &::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        background: url("../../assets/images/icons/icon-say-hello.svg") no-repeat center left;
-        background-size: contain;
-        margin-right: 10px;
-      }
-
-      &:hover {
-        background: #121c2c;
-      }
+      background: url("../../assets/images/icons/icon-say-hello.svg") no-repeat center left;
+      background-size: contain;
+      margin-right: 10px;
     }
-  }
 
-  ul {
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-    width: 100%;
-    padding: 40px 0 0;
-    list-style: none;
-    gap: 10px;
-    justify-content: center;
-
-    li a {
-      display: block;
-      width: 28px;
-      height: 28px;
-
-      &.linkedin {
-        background: url("../../assets/images/icons/icon-linkedin-white.svg") no-repeat center;
-        background-size: 80%;
-      }
-
-      &.instagram {
-        background: url("../../assets/images/icons/icon-instagram-white.svg") no-repeat center;
-        background-size: 95%;
-      }
-
-      &.dribbble {
-        background: url("../../assets/images/icons/icon-dribbble-white.svg") no-repeat center;
-        background-size: 90%;
-      }
-
-      &.github {
-        background: url("../../assets/images/icons/icon-github-white.svg") no-repeat center;
-        background-size: 75%;
-      }
+    &:hover {
+      background: #121c2c;
     }
   }
 }
 
-@media screen and (max-width: $viewport-mobile) {
+@media screen and (max-width: $container-min-width) {
   .container {
-    ul {
-      position: relative;
-      bottom: unset;
-      width: 100%;
-      padding: 0 0 30px;
-      list-style: none;
-      gap: 10px;
-    }
+    background: #121c2a;
+    padding: 80px 0 100px;
   }
 }

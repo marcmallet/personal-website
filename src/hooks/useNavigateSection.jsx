@@ -4,20 +4,30 @@ export default function useNavigateSection(sections) {
   const [section, setSection] = useState(sections[0]);
 
   useEffect(() => {
+    const animateSectionOnLoad = () => {
+      const sectionId = window.location?.hash.split('#')[1];
+      const section = document.getElementById(sectionId)
+      if (!!sectionId && !!section) {
+        setSection(sectionId);
+        section.scrollIntoView({behavior: 'smooth'});
+        animateSection(section);
+      }
+    }
+    animateSectionOnLoad();
+
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
       sections.forEach((section) => {
         if (isSectionInViewport(section)) {
           history.replaceState(null, null, `#${section.id}`);
           setSection(section.id);
-          // console.log(section.id);
-          // animateSection(section);
+          animateSection(section);
         }
       });
     };
 
     const appContainer = document.getElementById('root');
-    appContainer.addEventListener('wheel', handleScroll);
+    appContainer.addEventListener('wheel', handleScroll, { passive: true });
 
     return () => {
       appContainer.removeEventListener('wheel', handleScroll);
@@ -38,23 +48,12 @@ export default function useNavigateSection(sections) {
     return sectionInTopBounds || sectionInBottomBounds;
   };
 
-  // const resetAnimateSection = () => {
-  //   const sections = document.querySelectorAll('section');
-  //   sections.forEach((section) => {
-  //     const sectionContent = section.querySelector(':first-child');
-  //     // sectionContent.classList.remove('visible');
-  //     // sectionContent.classList.add('hidden');
-  //     sectionContent.classList.remove('fade-in-up');
-  //   });
-  // }
-  //
-  // const animateSection = (section) => {
-  //   resetAnimateSection();
-  //   const sectionContent = section.querySelector(':first-child');
-  //   // sectionContent.classList.add('visible');
-  //   // sectionContent.classList.remove('hidden');
-  //   sectionContent.classList.add('fade-in-up');
-  // }
+  const animateSection = (section) => {
+    const sectionContent = section.querySelector(':first-child');
+    if (!sectionContent.classList.contains('animate-section')) {
+      sectionContent.classList.add('animate-section');
+    }
+  }
 
   const navigateSection = (event) => {
     event.preventDefault();
@@ -67,7 +66,7 @@ export default function useNavigateSection(sections) {
       history.replaceState(null, null, `#${sectionId}`);
       setSection(sectionId);
       section.scrollIntoView({behavior: 'smooth'});
-      // animateSection(section);
+      animateSection(section);
     }
   };
 

@@ -1,4 +1,5 @@
 import styles from "./About.module.scss";
+import PropTypes from 'prop-types';
 
 const DEFAULT_WORK = {
   ui: [
@@ -81,9 +82,9 @@ const DEFAULT_WORK = {
   ],
 };
 
-export default function About() {
+export default function About({ id }) {
   return (
-    <div className={`${styles.container} hidden`}>
+    <section id={id} className={styles.container}>
       <div className={styles.content}>
         <h2>About</h2>
         <p>
@@ -91,7 +92,6 @@ export default function About() {
           languages and frameworks, which has equipped me with a diverse and well-rounded skill set. Some of
           the my favourite technologies are listed below.
         </p>
-
         <div className={styles.grid}>
 
           <div className={styles.column}>
@@ -122,8 +122,11 @@ export default function About() {
           </div>
 
         </div>
-
       </div>
-    </div>
+    </section>
   )
 }
+
+About.propTypes = {
+  id: PropTypes.string.isRequired
+};

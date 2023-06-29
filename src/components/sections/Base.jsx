@@ -5,5 +5,3 @@ import Experience from "./Experience.jsx";
 import Contact from "./Contact";
 
 export {Section, Hero, About, Experience, Contact};
-
-

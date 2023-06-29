@@ -1,4 +1,5 @@
 import styles from "./Experience.module.scss";
+import PropTypes from 'prop-types';
 
 const DEFAULT_EXPERIENCE = [
   {
@@ -27,9 +28,9 @@ const DEFAULT_EXPERIENCE = [
   },
 ];
 
-function Experience() {
+export default function Experience({ id }) {
   return (
-    <div className={`${styles.container} hidden`}>
+    <section id={id} className={styles.container}>
       <div className={styles.content}>
         <h2>Work Experience</h2>
         <div className={styles.timeline}>
@@ -55,8 +56,10 @@ function Experience() {
         <a href="https://www.linkedin.com/in/marc-mallet-a1059815/" target="_blank" rel="noopener noreferrer"
            className={styles.linkedin}>View on LinkedIn</a>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Experience
+Experience.propTypes = {
+  id: PropTypes.string.isRequired
+};

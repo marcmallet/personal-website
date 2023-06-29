@@ -1,0 +1,53 @@
+@import "../../commen/variables";
+
+footer {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  padding-bottom: 50px;
+
+  ul {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    padding: 40px 0 0;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+
+    li a {
+      display: block;
+      width: 28px;
+      height: 28px;
+
+      &.linkedin {
+        background: url("../../assets/images/icons/icon-linkedin-white.svg") no-repeat center;
+        background-size: 80%;
+      }
+
+      &.instagram {
+        background: url("../../assets/images/icons/icon-instagram-white.svg") no-repeat center;
+        background-size: 95%;
+      }
+
+      &.dribbble {
+        background: url("../../assets/images/icons/icon-dribbble-white.svg") no-repeat center;
+        background-size: 90%;
+      }
+
+      &.github {
+        background: url("../../assets/images/icons/icon-github-white.svg") no-repeat center;
+        background-size: 75%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $container-min-width) {
+  footer {
+    background: #121c2a;
+    ul {
+      padding: 0;
+    }
+  }
+}

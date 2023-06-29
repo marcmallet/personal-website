@@ -40,7 +40,7 @@ nav {
   }
 }
 
-@media screen and (max-width: $viewport-mobile) {
+@media screen and (max-width: $container-min-width) {
   nav {
     &.progress {
       display: none;
