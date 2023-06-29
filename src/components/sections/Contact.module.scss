@@ -43,6 +43,7 @@
 
 @media screen and (max-width: $container-min-width) {
   .container {
+    border-top: 1px #121c2a solid;
     padding: 80px 0 100px;
     .content {
       opacity: 1;
