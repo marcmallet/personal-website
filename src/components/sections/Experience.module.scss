@@ -129,6 +129,7 @@
 @media screen and (max-width: $container-min-width) {
   .container {
     .content {
+      opacity: 1;
       .timeline {
         padding-bottom: 30px;
 
