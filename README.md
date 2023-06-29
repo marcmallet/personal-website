@@ -23,20 +23,24 @@
 
 <hr/>
 
-### 🛠 Getting it up and running
+### Getting it up and running
 1. Install all the dependencies
+
     ```sh
     npm install
     ```
 2. Run the application for development
+
     ```sh
     npm run dev
     ```
 3. Build the application
+
     ```sh
     npm run build
     ```
 4. Preview built application (The get an idea of what `prd` would be like)
+
     ```sh
     npm run preview
     ```
