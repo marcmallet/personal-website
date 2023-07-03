@@ -8,13 +8,12 @@ export default function Hero({ id }) {
       <div className={styles.content}>
           <hgroup>
             <h1>Marc Mallet</h1>
-            <h2>UI Designer <span>&bull;</span> Developer</h2>
+            <h2>Software<span>/</span>UI Developer</h2>
           </hgroup>
           <p>
-            I&apos;m a UI Designer and Full-stack Developer and love for crafting visually appealing and fluent digital
-            experiences. I have been writing code for over 15 years and love learning new things to continuously grow my skills.
-            I have a unique blend of creativity and technical expertise and focus on delivering user-centric
-            designs and features that align with business goals.
+            I&apos;m a Software Developer with over 15 years experience creating Full-stack applications. I love creating
+            visual appealing applications that is intuitive for the end user. My skill set is a blend of creative and technical
+            with an end goal on delivering user-centric designs and features that align with business goals.
           </p>
           <ul>
             <li><a href="https://www.linkedin.com/in/marc-mallet-a1059815/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}></a></li>

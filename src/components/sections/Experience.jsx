@@ -9,7 +9,7 @@ const DEFAULT_EXPERIENCE = [
     tags: ["Ruby on Rails", "JavaScript", "UI Design"]
   },
   {
-    position: "Senior Full Stack UI Developer",
+    position: "Senior Software/UI Developer",
     company: "Fundhouse, Cape Town, South Africa",
     date: "Jul 2019",
     tags: ["PHP", "React", "JavaScript", "UI Design"]
@@ -21,7 +21,7 @@ const DEFAULT_EXPERIENCE = [
     tags: ["Angular", "UI Design"]
   },
   {
-    position: "Full Stack UI Developer",
+    position: "Software/UI Developer",
     company: "Fundhouse, Cape Town, South Africa",
     date: "Sep 2015",
     tags: ["PHP", "JavaScript", "UI Design"]
