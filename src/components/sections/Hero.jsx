@@ -11,9 +11,10 @@ export default function Hero({ id }) {
             <h2>Software<span>/</span>UI Developer</h2>
           </hgroup>
           <p>
-            I&apos;m a Software Developer with over 15 years experience creating Full-stack applications. I love creating
-            visual appealing applications that is intuitive for the end user. My skill set is a blend of creative and technical
-            with an end goal on delivering user-centric designs and features that align with business goals.
+            I&apos;m a Software Developer with over 15 years experience creating Full-stack applications. I have passion
+            for creating visual appealing applications that is intuitive for end users. My skill set is a blend of
+            creative and technical with an end goal on delivering user-centric designs and features that align with
+            business goals.
           </p>
           <ul>
             <li><a href="https://www.linkedin.com/in/marc-mallet-a1059815/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}></a></li>
