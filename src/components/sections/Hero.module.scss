@@ -33,9 +33,7 @@
 
       h2 {
         color: $color-white;
-        //font-size: 22px;
         font-size: 1.5rem;
-
         font-weight: 200;
         line-height: 18px;
 
@@ -119,9 +117,21 @@
     .content {
       hgroup {
         h1 { font-size: 2.5rem }
-        h2 { font-size: 1rem }
+        h2 {
+          font-size: 1rem;
+
+          &::before {
+            width: 16px;
+            height: 16px;
+          }
+
+          &::after {
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
-      .mouse { display: none;}
+      .mouse { display: none; }
     }
   }
 }
